@@ -1,12 +1,19 @@
-// import logo from "./logo.svg";
+
 import "./App.css";
-// import { userGender } from "./userGender";
-import { getName } from "./formGenerates";
-// import getName2 from "./formGenerates2.js";
+import  UserGender  from "./userGender";
+import  CreateForm  from "./formGenerates";
+
 
 function App() {
-    // return userGender();
-  return getName();
+  return (
+    <>
+      <UserGender />
+      <hr/>
+      <hr/>
+      <hr/>
+      <CreateForm />
+    </>
+  );
 }
 
 export default App;

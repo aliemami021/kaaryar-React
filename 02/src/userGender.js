@@ -8,12 +8,12 @@ function renderUser() {
         <p className={isHe ? "blue" : "red"}>
           {user.first_name} {user.last_name} ({user.gender})
         </p>
-        {/* <img src={user.avatar} alt="harchi"></img> */}
+        <img src={user.avatar} alt="harchi"></img>
       </div>
     );
   });
 }
-export function userGender() {
+function UserGender() {
   return <div className="d-flex">{renderUser()}</div>;
 }
-export default renderUser;
+export default UserGender;

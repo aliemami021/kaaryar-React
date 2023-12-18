@@ -1,34 +1,18 @@
 import forms from "./formEntrance.json";
 
-export function getName() {
+function CreateForm() {
   return forms.map((form) => {
     return (
       <form>
         <label for={form.id}> {form.name} </label>
         <br></br>
-
-        {/* {form.type === "select" ? (
-          <select>
-            {form.options.map((option) => (
-              <option value={option.value}>{option.label}</option>
-            ))}
-          </select>
-        ) : (
-          <input
-            type={form.type}
-            placeholder={form.placeholder}
-            id={form.id}
-            name={form.name}
-          />
-        )} */}
-
-        {harchi(form)}
+        {MultipleChoice(form)}
       </form>
     );
   });
 }
 
-function harchi(form) {
+function MultipleChoice(form) {
   if (form.type === "select") {
     return (
       <select>
@@ -57,3 +41,4 @@ function harchi(form) {
     );
   }
 }
+export default CreateForm;
